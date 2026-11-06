@@ -1,0 +1,19 @@
+.projects__featured {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4rem, 8vw, 7rem);
+}
+
+.projects__others {
+  margin-top: clamp(4rem, 8vw, 6rem);
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  border-top: 1px solid var(--border);
+}
+
+.projects__others-title {
+  margin-bottom: 1.5rem;
+}
+
+.projects__others-title .eyebrow {
+  margin-bottom: 0;
+}

@@ -1,0 +1,48 @@
+.tech-icon {
+  --tech-hue: 210;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  border: 1px solid hsl(var(--tech-hue) 70% 60% / 0.28);
+  background: linear-gradient(160deg, hsl(var(--tech-hue) 70% 60% / 0.16), hsl(var(--tech-hue) 70% 50% / 0.04));
+  color: hsl(var(--tech-hue) 85% 72%);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  transition: transform var(--dur) var(--ease-out), border-color var(--dur) ease, box-shadow var(--dur) ease;
+}
+
+[data-theme='light'] .tech-icon {
+  color: hsl(var(--tech-hue) 70% 36%);
+  border-color: hsl(var(--tech-hue) 60% 45% / 0.3);
+  background: linear-gradient(160deg, hsl(var(--tech-hue) 70% 55% / 0.14), hsl(var(--tech-hue) 70% 55% / 0.03));
+}
+
+.tech-icon__mono {
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.tech-icon--sm {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+}
+
+.tech-icon--sm .tech-icon__mono {
+  font-size: 0.58rem;
+}
+
+.tech-icon--lg {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+}
+
+.tech-icon--lg .tech-icon__mono {
+  font-size: 0.86rem;
+}

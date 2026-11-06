@@ -1,0 +1,75 @@
+.email-fb {
+  margin-top: 0.9rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--accent-ring);
+  background: var(--accent-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.email-fb__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  color: var(--text-2);
+}
+
+.email-fb__close {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-3);
+  cursor: pointer;
+}
+
+.email-fb__close:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.email-fb__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.email-fb__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elev);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color var(--dur) ease, color var(--dur) ease;
+}
+
+.email-fb__btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  opacity: 1;
+}
+
+.email-fb__btn.is-copied {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.email-fb__addr {
+  font-size: 0.78rem;
+  color: var(--text-3);
+}

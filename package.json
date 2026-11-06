@@ -1,0 +1,25 @@
+{
+  "name": "amrut-golani-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Portfolio website of Amrut Golani — .NET Full Stack Developer | ASP.NET Core Developer",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "resume": "node scripts/generate-resume.mjs"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "framer-motion": "^12.0.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.0"
+  }
+}

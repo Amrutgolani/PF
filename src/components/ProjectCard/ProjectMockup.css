@@ -1,0 +1,532 @@
+.mockup-frame {
+  --mk-font: clamp(0.55rem, 1.1vw, 0.7rem);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elev-2);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  font-size: var(--mk-font);
+  color: var(--text-2);
+  line-height: 1.4;
+  transform: translateZ(0);
+}
+
+.mockup-frame__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elev);
+}
+
+.mockup-frame__dots {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.mockup-frame__dots i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border-strong);
+}
+
+.mockup-frame__url {
+  flex: 1;
+  padding: 0.25rem 0.6rem;
+  border-radius: 5px;
+  background: var(--surface);
+  color: var(--text-4);
+  font-size: calc(var(--mk-font) - 0.03rem);
+}
+
+.mockup-frame__body {
+  aspect-ratio: 16 / 10;
+  position: relative;
+}
+
+.mk {
+  position: absolute;
+  inset: 0;
+  display: grid;
+}
+
+/* shared atoms */
+.mk-avatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  flex-shrink: 0;
+}
+
+.mk-avatar--sm {
+  width: 14px;
+  height: 14px;
+}
+
+.mk-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  font-size: calc(var(--mk-font) - 0.05rem);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.mk-pill--green {
+  background: rgba(52, 211, 153, 0.14);
+  color: var(--success);
+}
+
+.mk-pill--blue {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* ---------------- Astrology ---------------- */
+.mk--astro {
+  grid-template-columns: 34% 1fr;
+}
+
+.mk-astro__side {
+  border-right: 1px solid var(--border);
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  overflow: hidden;
+}
+
+.mk-astro__side-head {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-4);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.mk-astro__person {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.4rem;
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+.mk-astro__person:first-of-type {
+  border: 1px solid var(--accent-ring);
+}
+
+.mk-astro__name {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 11ch;
+}
+
+.mk-astro__status {
+  display: block;
+  color: var(--text-4);
+  font-size: calc(var(--mk-font) - 0.05rem);
+}
+
+.mk-astro__status.is-on {
+  color: var(--success);
+}
+
+.mk-astro__chat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 0.7rem;
+  gap: 0.6rem;
+}
+
+.mk-astro__chat-head {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--text);
+  font-weight: 600;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.mk-astro__chat-head .mk-pill {
+  margin-left: auto;
+}
+
+.mk-astro__bubbles {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  overflow: hidden;
+}
+
+.mk-astro__side-head--mt {
+  margin-top: 0.5rem;
+}
+
+.mk-astro__notif {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text-3);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mk-astro__notif span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mk-astro__notif-dot {
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.mk-astro__composer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.55rem;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-4);
+}
+
+.mk-astro__send {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+
+.mk-bubble {
+  display: block;
+  height: 1.3em;
+  width: 55%;
+  border-radius: 8px;
+  background: var(--surface-hover);
+}
+
+.mk-bubble--out {
+  align-self: flex-end;
+  background: var(--accent-soft);
+  width: 45%;
+}
+
+.mk-bubble--long {
+  width: 70%;
+  height: 2.2em;
+}
+.mk-bubble--short {
+  width: 30%;
+}
+
+.mk-toast {
+  position: absolute;
+  right: 0.6rem;
+  top: 2.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--accent-ring);
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+  color: var(--accent);
+  max-width: 90%;
+}
+
+.mk-toast strong {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.mk-toast span {
+  display: block;
+  color: var(--text-4);
+  font-size: calc(var(--mk-font) - 0.05rem);
+}
+
+/* ---------------- Voyado ---------------- */
+.mk--voyado {
+  grid-template-rows: auto 1fr;
+  padding: 0.7rem;
+  gap: 0.6rem;
+}
+
+.mk-voyado__flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mk-voyado__node-wrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.mk-voyado__node-wrap:last-child {
+  flex: 0 0 auto;
+}
+
+.mk-voyado__node {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 7px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elev);
+  color: var(--text);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.mk-voyado__node.is-core {
+  border-color: var(--accent-ring);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.mk-voyado__link {
+  position: relative;
+  flex: 1;
+  height: 1px;
+  margin-inline: 0.3rem;
+  background: var(--border-strong);
+  overflow: visible;
+}
+
+.mk-voyado__packet {
+  position: absolute;
+  top: -2.5px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.mk-voyado__log {
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 0.5rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  overflow: hidden;
+}
+
+.mk-voyado__log-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-4);
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.mk-voyado__row {
+  display: grid;
+  grid-template-columns: 6.5em 1fr auto;
+  gap: 0.5rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 5px;
+  background: var(--bg-elev);
+  font-family: var(--font-mono);
+}
+
+.mk-voyado__src {
+  color: var(--accent);
+}
+.mk-voyado__msg {
+  color: var(--text-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mk-voyado__ok {
+  color: var(--success);
+}
+
+/* ---------------- Inventory ---------------- */
+.mk--inv {
+  grid-template-columns: 26% 1fr;
+}
+
+.mk-inv__side {
+  border-right: 1px solid var(--border);
+  padding: 0.65rem 0.55rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.mk-inv__brand {
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.mk-inv__nav {
+  padding: 0.3rem 0.45rem;
+  border-radius: 5px;
+  color: var(--text-4);
+}
+
+.mk-inv__nav.is-active {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.mk-inv__role {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.mk-inv__main {
+  padding: 0.65rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mk-inv__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.mk-inv__btn {
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  font-weight: 600;
+}
+
+.mk-inv__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+}
+
+.mk-inv__stats div {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0.55rem;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.mk-inv__stats span {
+  color: var(--text-4);
+}
+
+.mk-inv__stats strong {
+  color: var(--text);
+  font-size: calc(var(--mk-font) + 0.25rem);
+  line-height: 1.2;
+}
+
+.mk-inv__stats strong.is-warn {
+  color: var(--warning);
+}
+
+.mk-inv__table {
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.mk-inv__tr {
+  display: grid;
+  grid-template-columns: 5.5em 1fr 3.5em 4.5em;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elev);
+}
+
+.mk-inv__tr:last-child {
+  border-bottom: none;
+}
+
+.mk-inv__tr--head {
+  background: var(--surface-hover);
+  color: var(--text-4);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: calc(var(--mk-font) - 0.08rem);
+  letter-spacing: 0.05em;
+}
+
+.mk-inv__sku {
+  font-family: var(--font-mono);
+  color: var(--text-4);
+}
+
+.mk-inv__bar {
+  height: 5px;
+  border-radius: 3px;
+  background: var(--surface-hover);
+  overflow: hidden;
+}
+
+.mk-inv__bar i {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform-origin: left;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.mk-inv__bar i.is-low {
+  background: var(--warning);
+}
+
+@media (max-width: 575.98px) {
+  .mk-voyado__node span {
+    display: none;
+  }
+  .mk-voyado__node {
+    padding: 0.4rem;
+  }
+  .mk-inv__tr {
+    grid-template-columns: 4.5em 1fr 3em 3.5em;
+  }
+}

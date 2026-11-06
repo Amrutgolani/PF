@@ -1,0 +1,208 @@
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 62ch;
+}
+
+.about__text p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--text-2);
+  text-wrap: pretty;
+}
+
+.about__text p:first-child {
+  font-size: 1.15rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Highlights */
+.about__highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+  margin-top: 2.5rem;
+}
+
+.about__highlight {
+  display: flex;
+  gap: 0.9rem;
+  padding: 1.15rem 1.2rem;
+}
+
+.about__highlight-icon {
+  flex-shrink: 0;
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-ring);
+  color: var(--accent);
+}
+
+.about__highlight h3 {
+  font-size: 0.98rem;
+  margin-bottom: 0.3rem;
+}
+
+.about__highlight p {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text-3);
+}
+
+/* Profile card */
+.about__card {
+  padding: 1.6rem;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  position: sticky;
+  top: calc(var(--nav-h) + 1.5rem);
+}
+
+.about__card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.about__avatar {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.04em;
+  box-shadow: 0 10px 24px -12px var(--accent-ring);
+}
+
+.about__card-name {
+  display: block;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.about__card-role {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-3);
+}
+
+.about__facts {
+  list-style: none;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about__facts li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-2);
+}
+
+.about__facts svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.about__card-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  margin-bottom: 0.8rem;
+}
+
+.about__expertise {
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+}
+
+.about__expertise ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+}
+
+.about__expertise li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.86rem;
+  color: var(--text-2);
+  line-height: 1.4;
+}
+
+.about__expertise svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  color: var(--accent);
+}
+
+.about__journey {
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+}
+
+.about__journey-year {
+  display: inline-block;
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.15rem;
+}
+
+.about__journey-title {
+  font-size: 0.92rem;
+  margin-bottom: 0.15rem;
+}
+
+.about__journey-text {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-3);
+}
+
+@media (max-width: 991.98px) {
+  .about__card {
+    position: static;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about__highlights {
+    grid-template-columns: 1fr;
+  }
+  .about__expertise ul {
+    grid-template-columns: 1fr;
+  }
+  .about__card {
+    padding: 1.25rem;
+  }
+}

@@ -1,0 +1,85 @@
+.approach {
+  position: relative;
+}
+
+.approach__track {
+  position: absolute;
+  top: 2.6rem;
+  left: 4%;
+  right: 4%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent) 15%, var(--accent) 85%, transparent);
+  transform-origin: left;
+  opacity: 0.5;
+}
+
+.approach__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  counter-reset: step;
+}
+
+.approach__step {
+  position: relative;
+  padding: 1.5rem;
+  background: var(--bg-elev);
+}
+
+.approach__step-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.approach__icon {
+  width: 42px;
+  height: 42px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-ring);
+  color: var(--accent);
+}
+
+.approach__num {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--border-strong);
+  letter-spacing: -0.04em;
+  transition: color var(--dur) ease;
+}
+
+.approach__step:hover .approach__num {
+  color: var(--accent);
+}
+
+.approach__step h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.approach__step p {
+  font-size: 0.9rem;
+  color: var(--text-3);
+}
+
+@media (max-width: 991.98px) {
+  .approach__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .approach__track {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .approach__grid {
+    grid-template-columns: 1fr;
+  }
+}

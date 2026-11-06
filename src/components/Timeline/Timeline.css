@@ -1,0 +1,70 @@
+.timeline {
+  position: relative;
+  --tl-x: 14px;
+  --tl-gap: 2.75rem;
+}
+
+.timeline__line {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: var(--tl-x);
+  width: 1px;
+  background: linear-gradient(180deg, var(--accent) 0%, var(--border-strong) 60%, transparent 100%);
+  transform-origin: top;
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: calc(var(--tl-x) + 2.25rem);
+  padding-bottom: var(--tl-gap);
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline__marker {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: calc(var(--tl-x) * 2 + 1px);
+  height: calc(var(--tl-x) * 2 + 1px);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--bg);
+}
+
+.section--alt .timeline__marker,
+.card-base .timeline__marker {
+  background: var(--bg-elev);
+}
+
+.timeline__marker-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.timeline__marker--muted .timeline__marker-dot {
+  background: var(--text-4);
+  box-shadow: 0 0 0 4px var(--surface-hover);
+}
+
+.timeline--compact {
+  --tl-x: 9px;
+  --tl-gap: 1.6rem;
+}
+
+.timeline--compact .timeline__marker-dot {
+  width: 7px;
+  height: 7px;
+}
+
+.timeline--compact .timeline__item {
+  padding-left: calc(var(--tl-x) + 1.75rem);
+}

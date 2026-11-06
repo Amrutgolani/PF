@@ -1,0 +1,25 @@
+.back-to-top {
+  position: fixed;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  z-index: 900;
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: border-color var(--dur) ease, color var(--dur) ease;
+}
+
+.back-to-top:hover {
+  border-color: var(--accent-ring);
+  color: var(--accent);
+}
